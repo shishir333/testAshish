@@ -18,6 +18,8 @@ namespace TestService
             if (!string.IsNullOrEmpty(ticket))
             {
                 dbclass.GetAllManufacture(ticket, connestionString);
+                //hello
+                dbclass.GetAllBrandByManufactureId("", "", "");
 
             }
          //   dbclass.InsertStyleFromFile(connestionString);
