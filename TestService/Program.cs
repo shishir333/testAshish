@@ -20,6 +20,9 @@ namespace TestService
                 dbclass.GetAllManufacture(ticket, connestionString);
                 dbclass.GetAllBrandByManufactureId("", "", "");
 
+                dbclass.GetAllManufacture(ticket, connestionString);
+                dbclass.GetAllManufacture("", "");
+
             }
          //   dbclass.InsertStyleFromFile(connestionString);
 
