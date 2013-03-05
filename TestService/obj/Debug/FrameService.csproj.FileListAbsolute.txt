@@ -25,3 +25,6 @@ C:\FrameService\TestService\obj\Debug\FrameService.csprojResolveAssemblyReferenc
 F:\otto\Jobson Frame\FrameService\FrameService\TestService\bin\Debug\TestService.exe.config
 F:\otto\Jobson Frame\FrameService\FrameService\TestService\obj\Debug\TestService.exe
 F:\otto\Jobson Frame\FrameService\FrameService\TestService\obj\Debug\TestService.pdb
+F:\otto\Ashish\FrameService\TestService\bin\Debug\TestService.exe.config
+F:\otto\Ashish\FrameService\TestService\obj\Debug\TestService.exe
+F:\otto\Ashish\FrameService\TestService\obj\Debug\TestService.pdb
