@@ -1,0 +1,27 @@
+D:\TestService\TestService\bin\Debug\TestService.exe.config
+D:\TestService\TestService\bin\Debug\TestService.exe
+D:\TestService\TestService\bin\Debug\TestService.pdb
+D:\TestService\TestService\obj\Debug\ResolveAssemblyReference.cache
+D:\TestService\TestService\obj\Debug\TestService.exe
+D:\TestService\TestService\obj\Debug\TestService.pdb
+D:\TestInfo\TestService\TestService\bin\Debug\TestService.exe.config
+D:\TestInfo\TestService\TestService\obj\Debug\TestService.exe
+D:\TestInfo\TestService\TestService\obj\Debug\TestService.pdb
+D:\TestInfo\TestService\TestService\bin\Debug\TestService.exe
+D:\TestInfo\TestService\TestService\bin\Debug\TestService.pdb
+D:\TestInfo\TestService\TestService\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\hnguyen\Downloads\TestInfo\TestService\TestService\bin\Debug\TestService.exe.config
+C:\Users\hnguyen\Downloads\TestInfo\TestService\TestService\obj\Debug\TestService.exe
+C:\Users\hnguyen\Downloads\TestInfo\TestService\TestService\obj\Debug\TestService.pdb
+C:\Users\hnguyen\Downloads\TestInfo\TestService\TestService\bin\Debug\TestService.exe
+C:\Users\hnguyen\Downloads\TestInfo\TestService\TestService\bin\Debug\TestService.pdb
+C:\Users\hnguyen\Downloads\TestInfo\TestService\TestService\obj\Debug\ResolveAssemblyReference.cache
+C:\FrameService\TestService\bin\Debug\TestService.exe.config
+C:\FrameService\TestService\obj\Debug\TestService.exe
+C:\FrameService\TestService\obj\Debug\TestService.pdb
+C:\FrameService\TestService\bin\Debug\TestService.exe
+C:\FrameService\TestService\bin\Debug\TestService.pdb
+C:\FrameService\TestService\obj\Debug\FrameService.csprojResolveAssemblyReference.cache
+F:\otto\Jobson Frame\FrameService\FrameService\TestService\bin\Debug\TestService.exe.config
+F:\otto\Jobson Frame\FrameService\FrameService\TestService\obj\Debug\TestService.exe
+F:\otto\Jobson Frame\FrameService\FrameService\TestService\obj\Debug\TestService.pdb

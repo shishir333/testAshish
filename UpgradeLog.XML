@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="FrameService">
+</Property><Property Name="Solution File" Value="C:\Users\hnguyen\Downloads\TestInfo\TestService\FrameService.sln">
+</Property><Property Name="User Options File" Value="C:\Users\hnguyen\Downloads\TestInfo\TestService\FrameService.suo">
+</Property><Property Name="Date" Value="Wednesday, May 23, 2012">
+</Property><Property Name="Time" Value="10:19 AM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="FrameService.sln" Description="File successfully backed up as C:\Users\hnguyen\Downloads\TestInfo\TestService\Backup\FrameService.sln">
+</Event><Event ErrorLevel="0" Project="" Source="FrameService.suo" Description="File successfully backed up as C:\Users\hnguyen\Downloads\TestInfo\TestService\Backup\FrameService.suo">
+</Event><Event ErrorLevel="0" Project="FrameService" Source="TestService\FrameService.csproj" Description="Project file successfully backed up as C:\Users\hnguyen\Downloads\TestInfo\TestService\Backup\TestService\FrameService.csproj">
+</Event><Event ErrorLevel="0" Project="FrameService" Source="TestService\DBClass.cs" Description="File successfully backed up as C:\Users\hnguyen\Downloads\TestInfo\TestService\Backup\TestService\DBClass.cs">
+</Event><Event ErrorLevel="0" Project="FrameService" Source="TestService\Program.cs" Description="File successfully backed up as C:\Users\hnguyen\Downloads\TestInfo\TestService\Backup\TestService\Program.cs">
+</Event><Event ErrorLevel="0" Project="FrameService" Source="TestService\Properties\AssemblyInfo.cs" Description="File successfully backed up as C:\Users\hnguyen\Downloads\TestInfo\TestService\Backup\TestService\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="FrameService" Source="TestService\Properties\Settings.Designer.cs" Description="File successfully backed up as C:\Users\hnguyen\Downloads\TestInfo\TestService\Backup\TestService\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="FrameService" Source="TestService\Web References\FrameService\Reference.cs" Description="File successfully backed up as C:\Users\hnguyen\Downloads\TestInfo\TestService\Backup\TestService\Web References\FrameService\Reference.cs">
+</Event><Event ErrorLevel="0" Project="FrameService" Source="TestService\app.config" Description="File successfully backed up as C:\Users\hnguyen\Downloads\TestInfo\TestService\Backup\TestService\app.config">
+</Event><Event ErrorLevel="0" Project="FrameService" Source="TestService\Properties\Settings.settings" Description="File successfully backed up as C:\Users\hnguyen\Downloads\TestInfo\TestService\Backup\TestService\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="FrameService" Source="TestService\Web References\FrameService\FramesDataWs.disco" Description="File successfully backed up as C:\Users\hnguyen\Downloads\TestInfo\TestService\Backup\TestService\Web References\FrameService\FramesDataWs.disco">
+</Event><Event ErrorLevel="0" Project="FrameService" Source="TestService\Web References\FrameService\FramesDataWs.wsdl" Description="File successfully backed up as C:\Users\hnguyen\Downloads\TestInfo\TestService\Backup\TestService\Web References\FrameService\FramesDataWs.wsdl">
+</Event><Event ErrorLevel="0" Project="FrameService" Source="TestService\Web References\FrameService\Reference.map" Description="File successfully backed up as C:\Users\hnguyen\Downloads\TestInfo\TestService\Backup\TestService\Web References\FrameService\Reference.map">
+</Event><Event ErrorLevel="0" Project="FrameService" Source="TestService\FrameService.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="FrameService" Source="TestService\FrameService.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="FrameService.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="FrameService.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="FrameService" Source="TestService\FrameService.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

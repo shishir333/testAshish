@@ -1,0 +1,1607 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.framesdata.com/FDWS/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://www.framesdata.com/FDWS/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.framesdata.com/FDWS/">
+      <s:element name="FDWSQuickSearch">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="auth" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="quickSearch" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FDWSQuickSearchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FDWSQuickSearchResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FDWSGetStyleByCollectionID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="auth" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="collectionID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FDWSGetStyleByCollectionIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FDWSGetStyleByCollectionIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FDWSAuthenticate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="partnerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="subscriber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FDWSAuthenticateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FDWSAuthenticateResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FDWSAuthenticateForPMS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="partnerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="subscriber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="locations" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bzipcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="szipcode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FDWSAuthenticateForPMSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FDWSAuthenticateForPMSResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FDWSGetStyleColorsByStyleID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="auth" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StyleID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FDWSGetStyleColorsByStyleIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FDWSGetStyleColorsByStyleIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FDWSGetStyleConfigurationsByStyleID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="auth" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StyleID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FDWSGetStyleConfigurationsByStyleIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FDWSGetStyleConfigurationsByStyleIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FDWSgetStylesByIDs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="auth" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="manufacturerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="brandID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="collectionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="styleID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="productGroupID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="materialID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ageID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="genderID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="colorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="minEyeSize" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="maxEyeSize" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FDWSgetStylesByIDsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FDWSgetStylesByIDsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FDWSGetStyleConfigurationUpdates">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="auth" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="manufacturerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="updateSinceDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="filterByID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="filterType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FDWSGetStyleConfigurationUpdatesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FDWSGetStyleConfigurationUpdatesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FDWSGetStylePropertiesByStyleID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="auth" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StyleID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FDWSGetStylePropertiesByStyleIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FDWSGetStylePropertiesByStyleIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FDWSGetCollectionsByBrandID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="auth" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="brandID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FDWSGetCollectionsByBrandIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FDWSGetCollectionsByBrandIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FDWSGetBrandsByManufacturerID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="auth" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="manufacturerID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FDWSGetBrandsByManufacturerIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FDWSGetBrandsByManufacturerIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FDWSGetManufacturers">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="auth" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FDWSGetManufacturersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FDWSGetManufacturersResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FDWSGetAge">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="auth" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FDWSGetAgeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FDWSGetAgeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FDWSGetGender">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="auth" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FDWSGetGenderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FDWSGetGenderResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FDWSGetProductGroup">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="auth" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FDWSGetProductGroupResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FDWSGetProductGroupResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FDWSGetMaterial">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="auth" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FDWSGetMaterialResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FDWSGetMaterialResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FDWSGetColor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="auth" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FDWSGetColorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FDWSGetColorResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataSet" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:element ref="s:schema" />
+            <s:any />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="FDWSQuickSearchSoapIn">
+    <wsdl:part name="parameters" element="tns:FDWSQuickSearch" />
+  </wsdl:message>
+  <wsdl:message name="FDWSQuickSearchSoapOut">
+    <wsdl:part name="parameters" element="tns:FDWSQuickSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetStyleByCollectionIDSoapIn">
+    <wsdl:part name="parameters" element="tns:FDWSGetStyleByCollectionID" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetStyleByCollectionIDSoapOut">
+    <wsdl:part name="parameters" element="tns:FDWSGetStyleByCollectionIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="FDWSAuthenticateSoapIn">
+    <wsdl:part name="parameters" element="tns:FDWSAuthenticate" />
+  </wsdl:message>
+  <wsdl:message name="FDWSAuthenticateSoapOut">
+    <wsdl:part name="parameters" element="tns:FDWSAuthenticateResponse" />
+  </wsdl:message>
+  <wsdl:message name="FDWSAuthenticateForPMSSoapIn">
+    <wsdl:part name="parameters" element="tns:FDWSAuthenticateForPMS" />
+  </wsdl:message>
+  <wsdl:message name="FDWSAuthenticateForPMSSoapOut">
+    <wsdl:part name="parameters" element="tns:FDWSAuthenticateForPMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetStyleColorsByStyleIDSoapIn">
+    <wsdl:part name="parameters" element="tns:FDWSGetStyleColorsByStyleID" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetStyleColorsByStyleIDSoapOut">
+    <wsdl:part name="parameters" element="tns:FDWSGetStyleColorsByStyleIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetStyleConfigurationsByStyleIDSoapIn">
+    <wsdl:part name="parameters" element="tns:FDWSGetStyleConfigurationsByStyleID" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetStyleConfigurationsByStyleIDSoapOut">
+    <wsdl:part name="parameters" element="tns:FDWSGetStyleConfigurationsByStyleIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="FDWSgetStylesByIDsSoapIn">
+    <wsdl:part name="parameters" element="tns:FDWSgetStylesByIDs" />
+  </wsdl:message>
+  <wsdl:message name="FDWSgetStylesByIDsSoapOut">
+    <wsdl:part name="parameters" element="tns:FDWSgetStylesByIDsResponse" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetStyleConfigurationUpdatesSoapIn">
+    <wsdl:part name="parameters" element="tns:FDWSGetStyleConfigurationUpdates" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetStyleConfigurationUpdatesSoapOut">
+    <wsdl:part name="parameters" element="tns:FDWSGetStyleConfigurationUpdatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetStylePropertiesByStyleIDSoapIn">
+    <wsdl:part name="parameters" element="tns:FDWSGetStylePropertiesByStyleID" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetStylePropertiesByStyleIDSoapOut">
+    <wsdl:part name="parameters" element="tns:FDWSGetStylePropertiesByStyleIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetCollectionsByBrandIDSoapIn">
+    <wsdl:part name="parameters" element="tns:FDWSGetCollectionsByBrandID" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetCollectionsByBrandIDSoapOut">
+    <wsdl:part name="parameters" element="tns:FDWSGetCollectionsByBrandIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetBrandsByManufacturerIDSoapIn">
+    <wsdl:part name="parameters" element="tns:FDWSGetBrandsByManufacturerID" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetBrandsByManufacturerIDSoapOut">
+    <wsdl:part name="parameters" element="tns:FDWSGetBrandsByManufacturerIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetManufacturersSoapIn">
+    <wsdl:part name="parameters" element="tns:FDWSGetManufacturers" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetManufacturersSoapOut">
+    <wsdl:part name="parameters" element="tns:FDWSGetManufacturersResponse" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetAgeSoapIn">
+    <wsdl:part name="parameters" element="tns:FDWSGetAge" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetAgeSoapOut">
+    <wsdl:part name="parameters" element="tns:FDWSGetAgeResponse" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetGenderSoapIn">
+    <wsdl:part name="parameters" element="tns:FDWSGetGender" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetGenderSoapOut">
+    <wsdl:part name="parameters" element="tns:FDWSGetGenderResponse" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetProductGroupSoapIn">
+    <wsdl:part name="parameters" element="tns:FDWSGetProductGroup" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetProductGroupSoapOut">
+    <wsdl:part name="parameters" element="tns:FDWSGetProductGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetMaterialSoapIn">
+    <wsdl:part name="parameters" element="tns:FDWSGetMaterial" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetMaterialSoapOut">
+    <wsdl:part name="parameters" element="tns:FDWSGetMaterialResponse" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetColorSoapIn">
+    <wsdl:part name="parameters" element="tns:FDWSGetColor" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetColorSoapOut">
+    <wsdl:part name="parameters" element="tns:FDWSGetColorResponse" />
+  </wsdl:message>
+  <wsdl:message name="FDWSQuickSearchHttpGetIn">
+    <wsdl:part name="auth" type="s:string" />
+    <wsdl:part name="quickSearch" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FDWSQuickSearchHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetStyleByCollectionIDHttpGetIn">
+    <wsdl:part name="auth" type="s:string" />
+    <wsdl:part name="collectionID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetStyleByCollectionIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="FDWSAuthenticateHttpGetIn">
+    <wsdl:part name="partnerID" type="s:string" />
+    <wsdl:part name="subscriber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FDWSAuthenticateHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="FDWSAuthenticateForPMSHttpGetIn">
+    <wsdl:part name="partnerID" type="s:string" />
+    <wsdl:part name="subscriber" type="s:string" />
+    <wsdl:part name="locations" type="s:string" />
+    <wsdl:part name="bzipcode" type="s:string" />
+    <wsdl:part name="szipcode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FDWSAuthenticateForPMSHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetStyleColorsByStyleIDHttpGetIn">
+    <wsdl:part name="auth" type="s:string" />
+    <wsdl:part name="StyleID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetStyleColorsByStyleIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetStyleConfigurationsByStyleIDHttpGetIn">
+    <wsdl:part name="auth" type="s:string" />
+    <wsdl:part name="StyleID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetStyleConfigurationsByStyleIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="FDWSgetStylesByIDsHttpGetIn">
+    <wsdl:part name="auth" type="s:string" />
+    <wsdl:part name="manufacturerID" type="s:string" />
+    <wsdl:part name="brandID" type="s:string" />
+    <wsdl:part name="collectionID" type="s:string" />
+    <wsdl:part name="styleID" type="s:string" />
+    <wsdl:part name="productGroupID" type="s:string" />
+    <wsdl:part name="materialID" type="s:string" />
+    <wsdl:part name="ageID" type="s:string" />
+    <wsdl:part name="genderID" type="s:string" />
+    <wsdl:part name="colorID" type="s:string" />
+    <wsdl:part name="minEyeSize" type="s:string" />
+    <wsdl:part name="maxEyeSize" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FDWSgetStylesByIDsHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetStyleConfigurationUpdatesHttpGetIn">
+    <wsdl:part name="auth" type="s:string" />
+    <wsdl:part name="manufacturerID" type="s:string" />
+    <wsdl:part name="updateSinceDate" type="s:string" />
+    <wsdl:part name="filterByID" type="s:string" />
+    <wsdl:part name="filterType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetStyleConfigurationUpdatesHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetStylePropertiesByStyleIDHttpGetIn">
+    <wsdl:part name="auth" type="s:string" />
+    <wsdl:part name="StyleID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetStylePropertiesByStyleIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetCollectionsByBrandIDHttpGetIn">
+    <wsdl:part name="auth" type="s:string" />
+    <wsdl:part name="brandID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetCollectionsByBrandIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetBrandsByManufacturerIDHttpGetIn">
+    <wsdl:part name="auth" type="s:string" />
+    <wsdl:part name="manufacturerID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetBrandsByManufacturerIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetManufacturersHttpGetIn">
+    <wsdl:part name="auth" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetManufacturersHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetAgeHttpGetIn">
+    <wsdl:part name="auth" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetAgeHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetGenderHttpGetIn">
+    <wsdl:part name="auth" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetGenderHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetProductGroupHttpGetIn">
+    <wsdl:part name="auth" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetProductGroupHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetMaterialHttpGetIn">
+    <wsdl:part name="auth" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetMaterialHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetColorHttpGetIn">
+    <wsdl:part name="auth" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetColorHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="FDWSQuickSearchHttpPostIn">
+    <wsdl:part name="auth" type="s:string" />
+    <wsdl:part name="quickSearch" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FDWSQuickSearchHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetStyleByCollectionIDHttpPostIn">
+    <wsdl:part name="auth" type="s:string" />
+    <wsdl:part name="collectionID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetStyleByCollectionIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="FDWSAuthenticateHttpPostIn">
+    <wsdl:part name="partnerID" type="s:string" />
+    <wsdl:part name="subscriber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FDWSAuthenticateHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="FDWSAuthenticateForPMSHttpPostIn">
+    <wsdl:part name="partnerID" type="s:string" />
+    <wsdl:part name="subscriber" type="s:string" />
+    <wsdl:part name="locations" type="s:string" />
+    <wsdl:part name="bzipcode" type="s:string" />
+    <wsdl:part name="szipcode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FDWSAuthenticateForPMSHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetStyleColorsByStyleIDHttpPostIn">
+    <wsdl:part name="auth" type="s:string" />
+    <wsdl:part name="StyleID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetStyleColorsByStyleIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetStyleConfigurationsByStyleIDHttpPostIn">
+    <wsdl:part name="auth" type="s:string" />
+    <wsdl:part name="StyleID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetStyleConfigurationsByStyleIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="FDWSgetStylesByIDsHttpPostIn">
+    <wsdl:part name="auth" type="s:string" />
+    <wsdl:part name="manufacturerID" type="s:string" />
+    <wsdl:part name="brandID" type="s:string" />
+    <wsdl:part name="collectionID" type="s:string" />
+    <wsdl:part name="styleID" type="s:string" />
+    <wsdl:part name="productGroupID" type="s:string" />
+    <wsdl:part name="materialID" type="s:string" />
+    <wsdl:part name="ageID" type="s:string" />
+    <wsdl:part name="genderID" type="s:string" />
+    <wsdl:part name="colorID" type="s:string" />
+    <wsdl:part name="minEyeSize" type="s:string" />
+    <wsdl:part name="maxEyeSize" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FDWSgetStylesByIDsHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetStyleConfigurationUpdatesHttpPostIn">
+    <wsdl:part name="auth" type="s:string" />
+    <wsdl:part name="manufacturerID" type="s:string" />
+    <wsdl:part name="updateSinceDate" type="s:string" />
+    <wsdl:part name="filterByID" type="s:string" />
+    <wsdl:part name="filterType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetStyleConfigurationUpdatesHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetStylePropertiesByStyleIDHttpPostIn">
+    <wsdl:part name="auth" type="s:string" />
+    <wsdl:part name="StyleID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetStylePropertiesByStyleIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetCollectionsByBrandIDHttpPostIn">
+    <wsdl:part name="auth" type="s:string" />
+    <wsdl:part name="brandID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetCollectionsByBrandIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetBrandsByManufacturerIDHttpPostIn">
+    <wsdl:part name="auth" type="s:string" />
+    <wsdl:part name="manufacturerID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetBrandsByManufacturerIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetManufacturersHttpPostIn">
+    <wsdl:part name="auth" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetManufacturersHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetAgeHttpPostIn">
+    <wsdl:part name="auth" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetAgeHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetGenderHttpPostIn">
+    <wsdl:part name="auth" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetGenderHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetProductGroupHttpPostIn">
+    <wsdl:part name="auth" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetProductGroupHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetMaterialHttpPostIn">
+    <wsdl:part name="auth" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetMaterialHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetColorHttpPostIn">
+    <wsdl:part name="auth" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FDWSGetColorHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:portType name="FramesDataWsSoap">
+    <wsdl:operation name="FDWSQuickSearch">
+      <wsdl:input message="tns:FDWSQuickSearchSoapIn" />
+      <wsdl:output message="tns:FDWSQuickSearchSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetStyleByCollectionID">
+      <wsdl:input message="tns:FDWSGetStyleByCollectionIDSoapIn" />
+      <wsdl:output message="tns:FDWSGetStyleByCollectionIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FDWSAuthenticate">
+      <wsdl:input message="tns:FDWSAuthenticateSoapIn" />
+      <wsdl:output message="tns:FDWSAuthenticateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FDWSAuthenticateForPMS">
+      <wsdl:input message="tns:FDWSAuthenticateForPMSSoapIn" />
+      <wsdl:output message="tns:FDWSAuthenticateForPMSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetStyleColorsByStyleID">
+      <wsdl:input message="tns:FDWSGetStyleColorsByStyleIDSoapIn" />
+      <wsdl:output message="tns:FDWSGetStyleColorsByStyleIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetStyleConfigurationsByStyleID">
+      <wsdl:input message="tns:FDWSGetStyleConfigurationsByStyleIDSoapIn" />
+      <wsdl:output message="tns:FDWSGetStyleConfigurationsByStyleIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FDWSgetStylesByIDs">
+      <wsdl:input message="tns:FDWSgetStylesByIDsSoapIn" />
+      <wsdl:output message="tns:FDWSgetStylesByIDsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetStyleConfigurationUpdates">
+      <wsdl:input message="tns:FDWSGetStyleConfigurationUpdatesSoapIn" />
+      <wsdl:output message="tns:FDWSGetStyleConfigurationUpdatesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetStylePropertiesByStyleID">
+      <wsdl:input message="tns:FDWSGetStylePropertiesByStyleIDSoapIn" />
+      <wsdl:output message="tns:FDWSGetStylePropertiesByStyleIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetCollectionsByBrandID">
+      <wsdl:input message="tns:FDWSGetCollectionsByBrandIDSoapIn" />
+      <wsdl:output message="tns:FDWSGetCollectionsByBrandIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetBrandsByManufacturerID">
+      <wsdl:input message="tns:FDWSGetBrandsByManufacturerIDSoapIn" />
+      <wsdl:output message="tns:FDWSGetBrandsByManufacturerIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetManufacturers">
+      <wsdl:input message="tns:FDWSGetManufacturersSoapIn" />
+      <wsdl:output message="tns:FDWSGetManufacturersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetAge">
+      <wsdl:input message="tns:FDWSGetAgeSoapIn" />
+      <wsdl:output message="tns:FDWSGetAgeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetGender">
+      <wsdl:input message="tns:FDWSGetGenderSoapIn" />
+      <wsdl:output message="tns:FDWSGetGenderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetProductGroup">
+      <wsdl:input message="tns:FDWSGetProductGroupSoapIn" />
+      <wsdl:output message="tns:FDWSGetProductGroupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetMaterial">
+      <wsdl:input message="tns:FDWSGetMaterialSoapIn" />
+      <wsdl:output message="tns:FDWSGetMaterialSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetColor">
+      <wsdl:input message="tns:FDWSGetColorSoapIn" />
+      <wsdl:output message="tns:FDWSGetColorSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="FramesDataWsHttpGet">
+    <wsdl:operation name="FDWSQuickSearch">
+      <wsdl:input message="tns:FDWSQuickSearchHttpGetIn" />
+      <wsdl:output message="tns:FDWSQuickSearchHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetStyleByCollectionID">
+      <wsdl:input message="tns:FDWSGetStyleByCollectionIDHttpGetIn" />
+      <wsdl:output message="tns:FDWSGetStyleByCollectionIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FDWSAuthenticate">
+      <wsdl:input message="tns:FDWSAuthenticateHttpGetIn" />
+      <wsdl:output message="tns:FDWSAuthenticateHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FDWSAuthenticateForPMS">
+      <wsdl:input message="tns:FDWSAuthenticateForPMSHttpGetIn" />
+      <wsdl:output message="tns:FDWSAuthenticateForPMSHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetStyleColorsByStyleID">
+      <wsdl:input message="tns:FDWSGetStyleColorsByStyleIDHttpGetIn" />
+      <wsdl:output message="tns:FDWSGetStyleColorsByStyleIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetStyleConfigurationsByStyleID">
+      <wsdl:input message="tns:FDWSGetStyleConfigurationsByStyleIDHttpGetIn" />
+      <wsdl:output message="tns:FDWSGetStyleConfigurationsByStyleIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FDWSgetStylesByIDs">
+      <wsdl:input message="tns:FDWSgetStylesByIDsHttpGetIn" />
+      <wsdl:output message="tns:FDWSgetStylesByIDsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetStyleConfigurationUpdates">
+      <wsdl:input message="tns:FDWSGetStyleConfigurationUpdatesHttpGetIn" />
+      <wsdl:output message="tns:FDWSGetStyleConfigurationUpdatesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetStylePropertiesByStyleID">
+      <wsdl:input message="tns:FDWSGetStylePropertiesByStyleIDHttpGetIn" />
+      <wsdl:output message="tns:FDWSGetStylePropertiesByStyleIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetCollectionsByBrandID">
+      <wsdl:input message="tns:FDWSGetCollectionsByBrandIDHttpGetIn" />
+      <wsdl:output message="tns:FDWSGetCollectionsByBrandIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetBrandsByManufacturerID">
+      <wsdl:input message="tns:FDWSGetBrandsByManufacturerIDHttpGetIn" />
+      <wsdl:output message="tns:FDWSGetBrandsByManufacturerIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetManufacturers">
+      <wsdl:input message="tns:FDWSGetManufacturersHttpGetIn" />
+      <wsdl:output message="tns:FDWSGetManufacturersHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetAge">
+      <wsdl:input message="tns:FDWSGetAgeHttpGetIn" />
+      <wsdl:output message="tns:FDWSGetAgeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetGender">
+      <wsdl:input message="tns:FDWSGetGenderHttpGetIn" />
+      <wsdl:output message="tns:FDWSGetGenderHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetProductGroup">
+      <wsdl:input message="tns:FDWSGetProductGroupHttpGetIn" />
+      <wsdl:output message="tns:FDWSGetProductGroupHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetMaterial">
+      <wsdl:input message="tns:FDWSGetMaterialHttpGetIn" />
+      <wsdl:output message="tns:FDWSGetMaterialHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetColor">
+      <wsdl:input message="tns:FDWSGetColorHttpGetIn" />
+      <wsdl:output message="tns:FDWSGetColorHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="FramesDataWsHttpPost">
+    <wsdl:operation name="FDWSQuickSearch">
+      <wsdl:input message="tns:FDWSQuickSearchHttpPostIn" />
+      <wsdl:output message="tns:FDWSQuickSearchHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetStyleByCollectionID">
+      <wsdl:input message="tns:FDWSGetStyleByCollectionIDHttpPostIn" />
+      <wsdl:output message="tns:FDWSGetStyleByCollectionIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FDWSAuthenticate">
+      <wsdl:input message="tns:FDWSAuthenticateHttpPostIn" />
+      <wsdl:output message="tns:FDWSAuthenticateHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FDWSAuthenticateForPMS">
+      <wsdl:input message="tns:FDWSAuthenticateForPMSHttpPostIn" />
+      <wsdl:output message="tns:FDWSAuthenticateForPMSHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetStyleColorsByStyleID">
+      <wsdl:input message="tns:FDWSGetStyleColorsByStyleIDHttpPostIn" />
+      <wsdl:output message="tns:FDWSGetStyleColorsByStyleIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetStyleConfigurationsByStyleID">
+      <wsdl:input message="tns:FDWSGetStyleConfigurationsByStyleIDHttpPostIn" />
+      <wsdl:output message="tns:FDWSGetStyleConfigurationsByStyleIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FDWSgetStylesByIDs">
+      <wsdl:input message="tns:FDWSgetStylesByIDsHttpPostIn" />
+      <wsdl:output message="tns:FDWSgetStylesByIDsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetStyleConfigurationUpdates">
+      <wsdl:input message="tns:FDWSGetStyleConfigurationUpdatesHttpPostIn" />
+      <wsdl:output message="tns:FDWSGetStyleConfigurationUpdatesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetStylePropertiesByStyleID">
+      <wsdl:input message="tns:FDWSGetStylePropertiesByStyleIDHttpPostIn" />
+      <wsdl:output message="tns:FDWSGetStylePropertiesByStyleIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetCollectionsByBrandID">
+      <wsdl:input message="tns:FDWSGetCollectionsByBrandIDHttpPostIn" />
+      <wsdl:output message="tns:FDWSGetCollectionsByBrandIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetBrandsByManufacturerID">
+      <wsdl:input message="tns:FDWSGetBrandsByManufacturerIDHttpPostIn" />
+      <wsdl:output message="tns:FDWSGetBrandsByManufacturerIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetManufacturers">
+      <wsdl:input message="tns:FDWSGetManufacturersHttpPostIn" />
+      <wsdl:output message="tns:FDWSGetManufacturersHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetAge">
+      <wsdl:input message="tns:FDWSGetAgeHttpPostIn" />
+      <wsdl:output message="tns:FDWSGetAgeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetGender">
+      <wsdl:input message="tns:FDWSGetGenderHttpPostIn" />
+      <wsdl:output message="tns:FDWSGetGenderHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetProductGroup">
+      <wsdl:input message="tns:FDWSGetProductGroupHttpPostIn" />
+      <wsdl:output message="tns:FDWSGetProductGroupHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetMaterial">
+      <wsdl:input message="tns:FDWSGetMaterialHttpPostIn" />
+      <wsdl:output message="tns:FDWSGetMaterialHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetColor">
+      <wsdl:input message="tns:FDWSGetColorHttpPostIn" />
+      <wsdl:output message="tns:FDWSGetColorHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="FramesDataWsSoap" type="tns:FramesDataWsSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="FDWSQuickSearch">
+      <soap:operation soapAction="http://www.framesdata.com/FDWS/FDWSQuickSearch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetStyleByCollectionID">
+      <soap:operation soapAction="http://www.framesdata.com/FDWS/FDWSGetStyleByCollectionID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSAuthenticate">
+      <soap:operation soapAction="http://www.framesdata.com/FDWS/FDWSAuthenticate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSAuthenticateForPMS">
+      <soap:operation soapAction="http://www.framesdata.com/FDWS/FDWSAuthenticateForPMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetStyleColorsByStyleID">
+      <soap:operation soapAction="http://www.framesdata.com/FDWS/FDWSGetStyleColorsByStyleID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetStyleConfigurationsByStyleID">
+      <soap:operation soapAction="http://www.framesdata.com/FDWS/FDWSGetStyleConfigurationsByStyleID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSgetStylesByIDs">
+      <soap:operation soapAction="http://www.framesdata.com/FDWS/FDWSgetStylesByIDs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetStyleConfigurationUpdates">
+      <soap:operation soapAction="http://www.framesdata.com/FDWS/FDWSGetStyleConfigurationUpdates" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetStylePropertiesByStyleID">
+      <soap:operation soapAction="http://www.framesdata.com/FDWS/FDWSGetStylePropertiesByStyleID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetCollectionsByBrandID">
+      <soap:operation soapAction="http://www.framesdata.com/FDWS/FDWSGetCollectionsByBrandID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetBrandsByManufacturerID">
+      <soap:operation soapAction="http://www.framesdata.com/FDWS/FDWSGetBrandsByManufacturerID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetManufacturers">
+      <soap:operation soapAction="http://www.framesdata.com/FDWS/FDWSGetManufacturers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetAge">
+      <soap:operation soapAction="http://www.framesdata.com/FDWS/FDWSGetAge" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetGender">
+      <soap:operation soapAction="http://www.framesdata.com/FDWS/FDWSGetGender" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetProductGroup">
+      <soap:operation soapAction="http://www.framesdata.com/FDWS/FDWSGetProductGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetMaterial">
+      <soap:operation soapAction="http://www.framesdata.com/FDWS/FDWSGetMaterial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetColor">
+      <soap:operation soapAction="http://www.framesdata.com/FDWS/FDWSGetColor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="FramesDataWsSoap12" type="tns:FramesDataWsSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="FDWSQuickSearch">
+      <soap12:operation soapAction="http://www.framesdata.com/FDWS/FDWSQuickSearch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetStyleByCollectionID">
+      <soap12:operation soapAction="http://www.framesdata.com/FDWS/FDWSGetStyleByCollectionID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSAuthenticate">
+      <soap12:operation soapAction="http://www.framesdata.com/FDWS/FDWSAuthenticate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSAuthenticateForPMS">
+      <soap12:operation soapAction="http://www.framesdata.com/FDWS/FDWSAuthenticateForPMS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetStyleColorsByStyleID">
+      <soap12:operation soapAction="http://www.framesdata.com/FDWS/FDWSGetStyleColorsByStyleID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetStyleConfigurationsByStyleID">
+      <soap12:operation soapAction="http://www.framesdata.com/FDWS/FDWSGetStyleConfigurationsByStyleID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSgetStylesByIDs">
+      <soap12:operation soapAction="http://www.framesdata.com/FDWS/FDWSgetStylesByIDs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetStyleConfigurationUpdates">
+      <soap12:operation soapAction="http://www.framesdata.com/FDWS/FDWSGetStyleConfigurationUpdates" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetStylePropertiesByStyleID">
+      <soap12:operation soapAction="http://www.framesdata.com/FDWS/FDWSGetStylePropertiesByStyleID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetCollectionsByBrandID">
+      <soap12:operation soapAction="http://www.framesdata.com/FDWS/FDWSGetCollectionsByBrandID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetBrandsByManufacturerID">
+      <soap12:operation soapAction="http://www.framesdata.com/FDWS/FDWSGetBrandsByManufacturerID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetManufacturers">
+      <soap12:operation soapAction="http://www.framesdata.com/FDWS/FDWSGetManufacturers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetAge">
+      <soap12:operation soapAction="http://www.framesdata.com/FDWS/FDWSGetAge" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetGender">
+      <soap12:operation soapAction="http://www.framesdata.com/FDWS/FDWSGetGender" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetProductGroup">
+      <soap12:operation soapAction="http://www.framesdata.com/FDWS/FDWSGetProductGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetMaterial">
+      <soap12:operation soapAction="http://www.framesdata.com/FDWS/FDWSGetMaterial" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetColor">
+      <soap12:operation soapAction="http://www.framesdata.com/FDWS/FDWSGetColor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="FramesDataWsHttpGet" type="tns:FramesDataWsHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="FDWSQuickSearch">
+      <http:operation location="/FDWSQuickSearch" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetStyleByCollectionID">
+      <http:operation location="/FDWSGetStyleByCollectionID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSAuthenticate">
+      <http:operation location="/FDWSAuthenticate" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSAuthenticateForPMS">
+      <http:operation location="/FDWSAuthenticateForPMS" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetStyleColorsByStyleID">
+      <http:operation location="/FDWSGetStyleColorsByStyleID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetStyleConfigurationsByStyleID">
+      <http:operation location="/FDWSGetStyleConfigurationsByStyleID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSgetStylesByIDs">
+      <http:operation location="/FDWSgetStylesByIDs" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetStyleConfigurationUpdates">
+      <http:operation location="/FDWSGetStyleConfigurationUpdates" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetStylePropertiesByStyleID">
+      <http:operation location="/FDWSGetStylePropertiesByStyleID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetCollectionsByBrandID">
+      <http:operation location="/FDWSGetCollectionsByBrandID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetBrandsByManufacturerID">
+      <http:operation location="/FDWSGetBrandsByManufacturerID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetManufacturers">
+      <http:operation location="/FDWSGetManufacturers" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetAge">
+      <http:operation location="/FDWSGetAge" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetGender">
+      <http:operation location="/FDWSGetGender" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetProductGroup">
+      <http:operation location="/FDWSGetProductGroup" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetMaterial">
+      <http:operation location="/FDWSGetMaterial" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetColor">
+      <http:operation location="/FDWSGetColor" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="FramesDataWsHttpPost" type="tns:FramesDataWsHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="FDWSQuickSearch">
+      <http:operation location="/FDWSQuickSearch" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetStyleByCollectionID">
+      <http:operation location="/FDWSGetStyleByCollectionID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSAuthenticate">
+      <http:operation location="/FDWSAuthenticate" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSAuthenticateForPMS">
+      <http:operation location="/FDWSAuthenticateForPMS" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetStyleColorsByStyleID">
+      <http:operation location="/FDWSGetStyleColorsByStyleID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetStyleConfigurationsByStyleID">
+      <http:operation location="/FDWSGetStyleConfigurationsByStyleID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSgetStylesByIDs">
+      <http:operation location="/FDWSgetStylesByIDs" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetStyleConfigurationUpdates">
+      <http:operation location="/FDWSGetStyleConfigurationUpdates" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetStylePropertiesByStyleID">
+      <http:operation location="/FDWSGetStylePropertiesByStyleID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetCollectionsByBrandID">
+      <http:operation location="/FDWSGetCollectionsByBrandID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetBrandsByManufacturerID">
+      <http:operation location="/FDWSGetBrandsByManufacturerID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetManufacturers">
+      <http:operation location="/FDWSGetManufacturers" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetAge">
+      <http:operation location="/FDWSGetAge" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetGender">
+      <http:operation location="/FDWSGetGender" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetProductGroup">
+      <http:operation location="/FDWSGetProductGroup" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetMaterial">
+      <http:operation location="/FDWSGetMaterial" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FDWSGetColor">
+      <http:operation location="/FDWSGetColor" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FramesDataWs">
+    <wsdl:port name="FramesDataWsSoap" binding="tns:FramesDataWsSoap">
+      <soap:address location="http://www.framesdata.com/FDWS/FramesDataWs.asmx" />
+    </wsdl:port>
+    <wsdl:port name="FramesDataWsSoap12" binding="tns:FramesDataWsSoap12">
+      <soap12:address location="http://www.framesdata.com/FDWS/FramesDataWs.asmx" />
+    </wsdl:port>
+    <wsdl:port name="FramesDataWsHttpGet" binding="tns:FramesDataWsHttpGet">
+      <http:address location="http://www.framesdata.com/FDWS/FramesDataWs.asmx" />
+    </wsdl:port>
+    <wsdl:port name="FramesDataWsHttpPost" binding="tns:FramesDataWsHttpPost">
+      <http:address location="http://www.framesdata.com/FDWS/FramesDataWs.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

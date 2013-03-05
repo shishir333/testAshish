@@ -1,0 +1,6 @@
+D:\TestService\TestService\bin\Debug\TestService.exe.config
+D:\TestService\TestService\bin\Debug\TestService.exe
+D:\TestService\TestService\bin\Debug\TestService.pdb
+D:\TestService\TestService\obj\Debug\ResolveAssemblyReference.cache
+D:\TestService\TestService\obj\Debug\TestService.exe
+D:\TestService\TestService\obj\Debug\TestService.pdb
